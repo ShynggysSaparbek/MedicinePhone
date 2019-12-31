@@ -38,6 +38,7 @@ class GenderPresenter: GenderPresenterProtocol {
     }
     
     func configureView() {
-        print("")
+        view.femaleButton.layer.cornerRadius = 16
+        view.maleButton.layer.cornerRadius = 16
     }
 }

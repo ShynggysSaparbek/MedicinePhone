@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 protocol LocationViewProtocol{
     
 }
@@ -15,6 +16,7 @@ class LocationsViewController: UIViewController {
     var configurator: LocationsConfiguratorProtocol = LocationsConfigurator()
     var locations: [LocationStructure]!
     
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
     @IBOutlet weak var latitudeTextField: UITextField!

@@ -64,6 +64,7 @@ class OptionsView: UIStackView, BrowsableOptionView{
     //configures properties of created columns
     private func configureColumn(column: UIStackView){
         column.axis = .vertical
+        column.spacing = 16
     }
     
     //creates option buttons
@@ -77,7 +78,9 @@ class OptionsView: UIStackView, BrowsableOptionView{
     
     //configures created option buttons
     private func configureOptionButton(button: UIButton, with title: String){
-        button.backgroundColor = .blue
+        button.backgroundColor = .gray
+        button.titleLabel?.textColor = .white
+        button.layer.cornerRadius = 8
         button.isHidden = false
         button.isEnabled = true
         
@@ -99,6 +102,7 @@ class OptionsView: UIStackView, BrowsableOptionView{
             let column = columns[index % columnNumber]
             column.addArrangedSubview(button)
         }
+        
     }
     
     //inserts created columns with buttons in view
