@@ -8,19 +8,14 @@
 
 import UIKit
 import MapKit
-protocol LocationViewProtocol{
-    
-}
 class LocationsViewController: UIViewController {
     var presenter: LocationsPresenterProtocol!
     var configurator: LocationsConfiguratorProtocol = LocationsConfigurator()
     var locations: [LocationStructure]!
+    var newLocation: LocationStructure?
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var longitudeTextField: UITextField!
-    @IBOutlet weak var latitudeTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -31,14 +26,26 @@ class LocationsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func saveButton(_ sender: UIButton) {
+    @IBAction func selectLocationButtonPressed(_ sender: Any) {
+        presenter.moveToSelectLocation()
+    }
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let name = nameTextField.text else { return }
-        guard let longitude = Double(longitudeTextField.text!) else { return }
-        guard let latitude = Double(latitudeTextField.text!) else { return }
-        let location = LocationStructure(name: name, longitude: longitude, latitude: latitude)
+        guard var location = newLocation else {
+            return
+        }
+        location.name = name
+        
         presenter.addLocation(location: location)
         locations.append(location)
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "selectLocation"){
+            let vc = segue.destination as! LocationViewController
+            vc.locationsViewController = self
+        }
     }
     
 }

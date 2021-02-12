@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		057BE8777A7F0EE954154182 /* libPods-MedicineProjectV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6049148E5CF3352E85613A /* libPods-MedicineProjectV2.a */; };
+		73964DE425D6A88C0059CFBE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73964DE325D6A88C0059CFBE /* LocationViewController.swift */; };
+		73964DE825D6A9010059CFBE /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73964DE725D6A9010059CFBE /* LocationInteractor.swift */; };
+		73964DEE25D6A96D0059CFBE /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73964DED25D6A96D0059CFBE /* LocationPresenter.swift */; };
+		73964DF225D6A9FE0059CFBE /* LocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73964DF125D6A9FE0059CFBE /* LocationRouter.swift */; };
+		73964DF625D6AAC70059CFBE /* LocationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73964DF525D6AAC70059CFBE /* LocationConfigurator.swift */; };
 		956529362307AB54008F8246 /* PhoneStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956529352307AB54008F8246 /* PhoneStructure.swift */; };
 		956529382307ABA4008F8246 /* GenderStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956529372307ABA4008F8246 /* GenderStructure.swift */; };
 		9565293A2307ABD4008F8246 /* ProfileImageStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956529392307ABD4008F8246 /* ProfileImageStructure.swift */; };
@@ -70,6 +75,11 @@
 
 /* Begin PBXFileReference section */
 		2E7C4722CA7C2909B9A20392 /* Pods-MedicineProjectV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicineProjectV2.debug.xcconfig"; path = "Target Support Files/Pods-MedicineProjectV2/Pods-MedicineProjectV2.debug.xcconfig"; sourceTree = "<group>"; };
+		73964DE325D6A88C0059CFBE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		73964DE725D6A9010059CFBE /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
+		73964DED25D6A96D0059CFBE /* LocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresenter.swift; sourceTree = "<group>"; };
+		73964DF125D6A9FE0059CFBE /* LocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRouter.swift; sourceTree = "<group>"; };
+		73964DF525D6AAC70059CFBE /* LocationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfigurator.swift; sourceTree = "<group>"; };
 		956529352307AB54008F8246 /* PhoneStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneStructure.swift; sourceTree = "<group>"; };
 		956529372307ABA4008F8246 /* GenderStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderStructure.swift; sourceTree = "<group>"; };
 		956529392307ABD4008F8246 /* ProfileImageStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageStructure.swift; sourceTree = "<group>"; };
@@ -192,6 +202,7 @@
 		95652952230B3BC2008F8246 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				73964DE325D6A88C0059CFBE /* LocationViewController.swift */,
 				9565293F230A7164008F8246 /* PhoneViewController.swift */,
 				95652961230B6018008F8246 /* LocationsViewController.swift */,
 				95652957230B3F83008F8246 /* GenderViewController.swift */,
@@ -208,6 +219,7 @@
 				95652959230B4058008F8246 /* GenderInteractor.swift */,
 				95652963230B6029008F8246 /* LocationsInteractor.swift */,
 				9565296D230C20CC008F8246 /* QuestionnaireInteractor.swift */,
+				73964DE725D6A9010059CFBE /* LocationInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 				95652965230B6078008F8246 /* LocationsPresenter.swift */,
 				9565296F230C20F9008F8246 /* QuestionnairePresenter.swift */,
 				9565297D2316B18E008F8246 /* OptionsView.swift */,
+				73964DED25D6A96D0059CFBE /* LocationPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 				9565295D230B4079008F8246 /* GenderRouter.swift */,
 				95652967230B608B008F8246 /* LocationsRouter.swift */,
 				95652971230C2142008F8246 /* QuestionnaireRouter.swift */,
+				73964DF125D6A9FE0059CFBE /* LocationRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 				9565295F230B4098008F8246 /* GenderConfigurator.swift */,
 				95652969230B60F9008F8246 /* LocationsConfiguration.swift */,
 				95652973230C2163008F8246 /* QuestionnaireConfiguration.swift */,
+				73964DF525D6AAC70059CFBE /* LocationConfigurator.swift */,
 			);
 			path = Configurators;
 			sourceTree = "<group>";
@@ -494,7 +509,10 @@
 				959D6E5B2307267200D534CA /* StoredArrayManager.swift in Sources */,
 				956529362307AB54008F8246 /* PhoneStructure.swift in Sources */,
 				95652964230B6029008F8246 /* LocationsInteractor.swift in Sources */,
+				73964DE425D6A88C0059CFBE /* LocationViewController.swift in Sources */,
 				95652960230B4098008F8246 /* GenderConfigurator.swift in Sources */,
+				73964DF225D6A9FE0059CFBE /* LocationRouter.swift in Sources */,
+				73964DE825D6A9010059CFBE /* LocationInteractor.swift in Sources */,
 				9565295A230B4058008F8246 /* GenderInteractor.swift in Sources */,
 				9565295E230B4079008F8246 /* GenderRouter.swift in Sources */,
 				959D6E2522FAF49800D534CA /* AppDelegate.swift in Sources */,
@@ -502,6 +520,7 @@
 				95652946230A71F8008F8246 /* PhonePresenter.swift in Sources */,
 				95652940230A7164008F8246 /* PhoneViewController.swift in Sources */,
 				959D6E3A22FAF50A00D534CA /* MemoryManager.swift in Sources */,
+				73964DF625D6AAC70059CFBE /* LocationConfigurator.swift in Sources */,
 				9565296C230C20B3008F8246 /* QuestionnaireViewController.swift in Sources */,
 				956529382307ABA4008F8246 /* GenderStructure.swift in Sources */,
 				95652979230D02DD008F8246 /* QuestionnaireService.swift in Sources */,
@@ -511,6 +530,7 @@
 				95652970230C20F9008F8246 /* QuestionnairePresenter.swift in Sources */,
 				95652944230A71D7008F8246 /* PhoneRouter.swift in Sources */,
 				95652972230C2142008F8246 /* QuestionnaireRouter.swift in Sources */,
+				73964DEE25D6A96D0059CFBE /* LocationPresenter.swift in Sources */,
 				959D6E2D22FAF49800D534CA /* MedicineProjectV2.xcdatamodeld in Sources */,
 				95652962230B6018008F8246 /* LocationsViewController.swift in Sources */,
 				95652958230B3F83008F8246 /* GenderViewController.swift in Sources */,

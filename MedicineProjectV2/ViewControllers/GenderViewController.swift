@@ -7,10 +7,7 @@
 //
 
 import UIKit
-protocol GenderViewProtocol{
-    
-}
-class GenderViewController: UIViewController {
+class GenderViewController: UIViewController{
     
     var presenter: GenderPresenterProtocol!
     var configurator: GenderConfiguratorProtocol = GenderConfigurator()

@@ -7,9 +7,7 @@
 //
 
 import UIKit
-protocol PhoneViewProtocol: class {
-}
-class PhoneViewController: UIViewController, PhoneViewProtocol {
+class PhoneViewController: UIViewController{
     var presenter: PhonePresenterProtocol!
     var configurator: PhoneConfiguratorProtocol = PhoneConfigurator()
     

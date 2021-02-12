@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D99-yD-rxl">
-                                <rect key="frame" x="20" y="418" width="374" height="444"/>
+                                <rect key="frame" x="20" y="306" width="374" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pbQ-Q4-26g">
@@ -163,37 +163,34 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DyK-zb-AmD">
-                                <rect key="frame" x="20" y="64" width="374" height="301"/>
+                                <rect key="frame" x="20" y="64" width="374" height="231"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавьте локацию на которую можно позвать помощь" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-ip-TFb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавьте локацию на которую можно позвать помощь" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-ip-TFb">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-2k-nL2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-2k-nL2">
                                         <rect key="frame" x="0.0" y="73" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Долгота" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2U-xb-sMF">
-                                        <rect key="frame" x="0.0" y="139" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Широта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-lg-Q6R">
-                                        <rect key="frame" x="0.0" y="205" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-Wu-7rQ">
+                                        <rect key="frame" x="0.0" y="139" width="374" height="30"/>
+                                        <state key="normal" title="Выбрать точку на карте"/>
+                                        <connections>
+                                            <action selector="selectLocationButtonPressed:" destination="n4u-Cp-aj9" eventType="touchUpInside" id="qoP-od-gGE"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32B-qD-dN6">
-                                        <rect key="frame" x="0.0" y="271" width="374" height="30"/>
-                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="201" width="374" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="saveButton:" destination="n4u-Cp-aj9" eventType="touchUpInside" id="2rC-fu-zK9"/>
+                                            <action selector="saveButtonPressed:" destination="n4u-Cp-aj9" eventType="touchUpInside" id="2rC-fu-zK9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -203,7 +200,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DyK-zb-AmD" firstAttribute="leading" secondItem="Duj-tD-aao" secondAttribute="leading" constant="20" id="64B-vR-acK"/>
-                            <constraint firstItem="D99-yD-rxl" firstAttribute="top" secondItem="DyK-zb-AmD" secondAttribute="bottom" constant="53" id="7j1-ij-h2l"/>
+                            <constraint firstItem="D99-yD-rxl" firstAttribute="top" secondItem="DyK-zb-AmD" secondAttribute="bottom" constant="11" id="CBP-zy-B0P"/>
                             <constraint firstItem="Duj-tD-aao" firstAttribute="trailing" secondItem="D99-yD-rxl" secondAttribute="trailing" constant="20" id="F1w-9e-TnX"/>
                             <constraint firstItem="DyK-zb-AmD" firstAttribute="top" secondItem="Duj-tD-aao" secondAttribute="top" constant="20" id="TIJ-Sj-R31"/>
                             <constraint firstItem="Duj-tD-aao" firstAttribute="bottom" secondItem="D99-yD-rxl" secondAttribute="bottom" id="W96-3s-5Qd"/>
@@ -213,16 +210,61 @@
                     </view>
                     <navigationItem key="navigationItem" id="aoI-9p-RY9"/>
                     <connections>
-                        <outlet property="latitudeTextField" destination="gMb-lg-Q6R" id="yrN-uj-UrS"/>
-                        <outlet property="longitudeTextField" destination="Y2U-xb-sMF" id="obE-Tv-ggt"/>
                         <outlet property="nameTextField" destination="wIL-2k-nL2" id="EIz-qR-GJg"/>
                         <outlet property="tableView" destination="D99-yD-rxl" id="pKL-Q4-3hL"/>
                         <segue destination="V8H-iD-63x" kind="modal" identifier="showQuestionnaire" modalPresentationStyle="fullScreen" id="2qB-jT-F62"/>
+                        <segue destination="LUd-2E-ZII" kind="show" identifier="selectLocation" id="5Dz-ZU-raY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxO-5K-ZlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="-35"/>
+            <point key="canvasLocation" x="1186.9565217391305" y="-35.491071428571423"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="UON-bF-7O0">
+            <objects>
+                <viewController id="LUd-2E-ZII" customClass="LocationViewController" customModule="MedicineProjectV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bOZ-K3-RBL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F60-Ok-HyC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-KK-czh">
+                                <rect key="frame" x="134" y="746" width="146" height="43"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Q8m-7N-NaS"/>
+                                    <constraint firstAttribute="width" constant="146" id="mg7-sZ-e4B"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить Локацию">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLocationButtonPressed:" destination="LUd-2E-ZII" eventType="touchUpInside" id="dAE-cy-gbk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mCy-Vg-qin"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F60-Ok-HyC" firstAttribute="top" secondItem="mCy-Vg-qin" secondAttribute="top" id="CDw-pq-eOr"/>
+                            <constraint firstItem="mCy-Vg-qin" firstAttribute="trailing" secondItem="F60-Ok-HyC" secondAttribute="trailing" id="MGC-nJ-XZM"/>
+                            <constraint firstItem="F60-Ok-HyC" firstAttribute="leading" secondItem="mCy-Vg-qin" secondAttribute="leading" id="MR5-v8-X9R"/>
+                            <constraint firstItem="mCy-Vg-qin" firstAttribute="bottom" secondItem="BY4-KK-czh" secondAttribute="bottom" constant="19" id="P90-xR-zAi"/>
+                            <constraint firstItem="mCy-Vg-qin" firstAttribute="bottom" secondItem="F60-Ok-HyC" secondAttribute="bottom" id="qCH-rw-hDS"/>
+                            <constraint firstItem="BY4-KK-czh" firstAttribute="centerX" secondItem="F60-Ok-HyC" secondAttribute="centerX" id="rLk-NR-PbW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ki6-2R-4k6"/>
+                    <connections>
+                        <outlet property="mapView" destination="F60-Ok-HyC" id="evx-U0-nSF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbS-NB-mHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762.3188405797105" y="-722.54464285714278"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="kCE-5D-hSN">
@@ -294,11 +336,14 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="BAJ-No-tiA"/>
-        <segue reference="Tu5-VE-oND"/>
+        <segue reference="biK-E2-QJO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705878" green="0.44313725490196082" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

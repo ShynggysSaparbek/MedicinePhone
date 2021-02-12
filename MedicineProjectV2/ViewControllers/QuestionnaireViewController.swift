@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class QuestionnaireViewController: UIViewController {
     var presenter: QuestionnairePresenterProtocol!
     var configurator: QuestionnaireConfiguratorProtocol = QuestionnaireConfigurator()

@@ -18,11 +18,11 @@ protocol PhonePresenterProtocol: class{
 }
 class PhonePresenter: PhonePresenterProtocol {
     
-    weak var view: PhoneViewProtocol!
+    weak var view: PhoneViewController!
     var interactor: PhoneInteractorProtocol!
     var router: PhoneRouterProtocol!
     
-    required init(view: PhoneViewProtocol) {
+    required init(view: PhoneViewController) {
         self.view = view
     }
     

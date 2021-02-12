@@ -8,11 +8,13 @@
 
 import Foundation
 protocol LocationsPresenterProtocol: class {
-    var router: LocationRouterProtocol! { get set }
+    var router: LocationsRouterProtocol! { get set }
     var interactor: LocationsInteractorProtocol! {get set}
     
     func configureView()
     func settingDidFinished()
+    func moveToSelectLocation()
+    func moveToPhoneRegistration()
     
     func getLocation(by name: String)->LocationStructure?
     func getAllLocations()->[LocationStructure]?
@@ -20,14 +22,14 @@ protocol LocationsPresenterProtocol: class {
     func addLocation(location: LocationStructure)
     func countLocations()->Int
     func addLocation(name: String, latitude: Double, longitude: Double)
-    
+
     
 }
 class LocationsPresenter: LocationsPresenterProtocol{
     
     
     weak var view: LocationsViewController!
-    var router: LocationRouterProtocol!
+    var router: LocationsRouterProtocol!
     var interactor: LocationsInteractorProtocol!
     
     var location: [LocationStructure]!
@@ -55,6 +57,9 @@ class LocationsPresenter: LocationsPresenterProtocol{
     }
     func moveToPhoneRegistration(){
         router.moveToPhoneRegistartion()
+    }
+    func moveToSelectLocation(){
+        router.moveToSelectLocation()
     }
     func getLocation(by name: String) -> LocationStructure? {
         return interactor.getLocation(by: name)

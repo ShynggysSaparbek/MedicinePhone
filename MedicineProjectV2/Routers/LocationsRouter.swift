@@ -7,13 +7,14 @@
 //
 
 import Foundation
-protocol LocationRouterProtocol: class {
+protocol LocationsRouterProtocol: class { 
     var viewController: LocationsViewController! {get set}
     func closeCurrentViewController()
     func moveToQuestionnaire()
     func moveToPhoneRegistartion()
+    func moveToSelectLocation()
 }
-class LocationsRouter: LocationRouterProtocol{
+class LocationsRouter: LocationsRouterProtocol{
     weak var viewController: LocationsViewController!
     
     required init(viewController: LocationsViewController) {
@@ -30,5 +31,8 @@ class LocationsRouter: LocationRouterProtocol{
     
     func moveToPhoneRegistartion(){
         viewController.performSegue(withIdentifier: "changePhone", sender: nil)
+    }
+    func moveToSelectLocation(){
+        viewController.performSegue(withIdentifier: "selectLocation", sender: nil)
     }
 }

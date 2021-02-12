@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol PhoneInteractorProtocol {
+protocol PhoneInteractorProtocol{
     func setPhone(with number: String)
     func getPhoneNumber()->String?
     func isPhoneNumberRegistred()->Bool
