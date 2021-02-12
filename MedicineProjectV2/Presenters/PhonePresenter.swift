@@ -27,7 +27,9 @@ class PhonePresenter: PhonePresenterProtocol {
     }
     
     func configureView(){
-        print("")
+        if(interactor.isPhoneNumberRegistred()){
+            router.registrationDidFinished()
+        }
     }
     func setPhone(with number: String) {
         interactor.setPhone(with: number)

@@ -10,6 +10,7 @@ import Foundation
 protocol PhoneInteractorProtocol {
     func setPhone(with number: String)
     func getPhoneNumber()->String?
+    func isPhoneNumberRegistred()->Bool
 }
 class PhoneInteractor: PhoneInteractorProtocol {
     weak var presenter: PhonePresenterProtocol!
@@ -27,5 +28,9 @@ class PhoneInteractor: PhoneInteractorProtocol {
     func getPhoneNumber()->String?{
         let phone = service.get()
         return phone?.number
+    }
+    
+    func isPhoneNumberRegistred()->Bool{
+        return service.get() != nil
     }
 }

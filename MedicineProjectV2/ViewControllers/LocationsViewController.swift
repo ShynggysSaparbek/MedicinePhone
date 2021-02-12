@@ -16,6 +16,7 @@ class LocationsViewController: UIViewController {
     var configurator: LocationsConfiguratorProtocol = LocationsConfigurator()
     var locations: [LocationStructure]!
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
@@ -34,9 +35,10 @@ class LocationsViewController: UIViewController {
         guard let name = nameTextField.text else { return }
         guard let longitude = Double(longitudeTextField.text!) else { return }
         guard let latitude = Double(latitudeTextField.text!) else { return }
-        presenter.addLocation(name: name,
-                              latitude: latitude,
-                              longitude: longitude)
+        let location = LocationStructure(name: name, longitude: longitude, latitude: latitude)
+        presenter.addLocation(location: location)
+        locations.append(location)
+        tableView.reloadData()
     }
     
 }

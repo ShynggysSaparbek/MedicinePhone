@@ -16,12 +16,11 @@ class PhoneViewController: UIViewController, PhoneViewProtocol {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         configurator.configure(with: self)
         presenter.configureView()
-        
     }
     @IBAction func savePhoneNumberButton(_ sender: UIButton) {
         guard let number = textField.text else { return }

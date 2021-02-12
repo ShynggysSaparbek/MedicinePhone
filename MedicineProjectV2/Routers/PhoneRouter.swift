@@ -14,11 +14,9 @@ protocol PhoneRouterProtocol{
 }
 class PhoneRouter: PhoneRouterProtocol {
     weak var viewController: PhoneViewController!
-    var genderService: GenderService!
     
     required init(viewController: PhoneViewController) {
         self.viewController = viewController
-        genderService = GenderService()
     }
     
     func closeCurrentViewController() {
@@ -26,10 +24,6 @@ class PhoneRouter: PhoneRouterProtocol {
     }
     
     func registrationDidFinished() {
-        if genderService.isRegistred() {
-            viewController.performSegue(withIdentifier: "home", sender: nil)
-        }else {
-            viewController.performSegue(withIdentifier: "setGender", sender: nil)
-        }
+        viewController.performSegue(withIdentifier: "setGender", sender: nil)
     }
 }

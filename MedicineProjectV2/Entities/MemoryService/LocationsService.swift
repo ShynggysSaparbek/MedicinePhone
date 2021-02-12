@@ -36,7 +36,6 @@ final class LocationsService: LocationsServiceProtocol{
     
     func add(structure: LocationStructure){
         guard verification(structure: structure) else { return }
-        
         StoredArrayManager.add(type: Location.self, structure: structure)
     }
     

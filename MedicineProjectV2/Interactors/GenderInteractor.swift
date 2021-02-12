@@ -10,6 +10,7 @@ import UIKit
 protocol GenderInteractorProtocol {
     func setStatus(with status: String)
     func getStatus()->String?
+    func isGenderRegistred()->Bool
 }
 class GenderInteractor: GenderInteractorProtocol {
     weak var presenter: GenderPresenterProtocol!
@@ -29,4 +30,7 @@ class GenderInteractor: GenderInteractorProtocol {
         return gender?.status
     }
     
+    func isGenderRegistred()->Bool{
+        return service.get() != nil
+    }
 }

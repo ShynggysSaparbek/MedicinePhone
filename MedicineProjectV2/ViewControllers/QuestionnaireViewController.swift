@@ -17,8 +17,8 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var proggressView: UIProgressView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         configurator.configure(with: self)
         presenter.configureView()
